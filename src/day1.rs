@@ -24,7 +24,6 @@ pub fn part_2(str: &str) -> i32 {
         // Stupid trick to get overlapping regex matches
         for i in 0..line.len() {
             if let Some(m) = re.find_at(line, i) {
-                println!("{}",m.as_str());
                 if let Ok(val) = str::parse::<i32>(m.as_str()) {
                     nums.push(val);
                 } else {
