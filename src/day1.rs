@@ -73,6 +73,7 @@ mod tests {
         4nineeightseven2
         zoneight234
         7pqrstsixteen";
+        
         assert_eq!(crate::day1::part_2(input), 281)
     }
 }

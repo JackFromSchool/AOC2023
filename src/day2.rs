@@ -8,7 +8,9 @@ pub fn part_1(str: &str) -> u32 {
     for (i, line) in str.lines().enumerate() {
         let items = re.replace(line, "");
         let mut possible = true;
+        
         for token in items.replace(";", ",").split(",") {
+            
             if token.contains("red") {
                 let num = token.replace(" red", "").trim().parse::<u32>().unwrap();
                 if num > 12 { possible = false; }
@@ -20,6 +22,7 @@ pub fn part_1(str: &str) -> u32 {
                 if num > 14 { possible = false; }
             }
         }
+        
         if possible {
             games += i as u32 + 1;
         }
@@ -53,6 +56,7 @@ pub fn part_2(str: &str) -> u32 {
         let mut colors = Colors::default();
         
         for token in items.replace(";", ",").split(",") {
+            
             if token.contains("red") {
                 let num = token.replace(" red", "").trim().parse::<u32>().unwrap();
                 if num > colors.red {
