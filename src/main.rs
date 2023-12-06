@@ -2,6 +2,7 @@ use aoc_2023::day1;
 use aoc_2023::day2;
 use aoc_2023::day3;
 use aoc_2023::day4;
+use aoc_2023::day5;
 
 fn main() {
     let input1 = include_str!("inputs/day1.txt");
@@ -19,4 +20,8 @@ fn main() {
     let input4 = include_str!("inputs/day4.txt");
     println!("Day 4.1 solution {}", day4::part_1(input4));
     println!("Day 4.2 solution {}", day4::part_2(input4));
+    println!("=========================================");
+    let input5 = include_str!("inputs/day5.txt");
+    println!("Day 5.1 solution {}", day5::part_1(input5));
+    println!("Day 5.2 solution {}", day5::part_2(input5));
 }
